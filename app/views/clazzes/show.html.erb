@@ -1,0 +1,17 @@
+<div>
+  <h3>Class</h3>
+  <div>
+    <span>Name</span>
+    <span><%= @clazz.name %></span>
+  </div>
+  <div>
+    <span>Teachers</span>
+    <span><%= @clazz.teachers.map(&:name).join(', ') %></span>
+  </div>
+  <div>
+    <span>Students</span>
+    <span><%= @clazz.students.map(&:name).join(', ') %></span>
+  </div>
+</div>
+<hr/>
+<%= link_to 'Back', clazzes_path %>

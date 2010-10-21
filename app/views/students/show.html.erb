@@ -1,0 +1,13 @@
+<div>
+  <h3>Student</h3>
+  <div>
+    <span>Name : </span>
+    <span><%= @student.name %></span>
+  </div>
+  <div>
+    <span>Classes : </span>
+    <span><%= @student.clazzes.map(&:name).join(', ') %></span>
+  </div>
+</div>
+<hr/>
+<%= link_to 'Back', students_path %>

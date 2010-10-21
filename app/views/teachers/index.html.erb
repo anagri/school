@@ -1,0 +1,15 @@
+<div>
+  <h3>Teachers</h3>
+  <div>
+    <% @teachers.each do |teacher| %>
+      <div>
+      <span><%= teacher.name %></span>
+      <span><%= link_to 'Show', teacher_path(teacher) %></span>
+      <span><%= link_to 'Edit', edit_teacher_path(teacher) %></span>
+      <span><%= link_to 'Delete', teacher_path(teacher), :method => :delete %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
+<hr/>
+<%= link_to 'New', new_teacher_path %>

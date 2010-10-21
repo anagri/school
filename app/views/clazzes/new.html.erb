@@ -1,0 +1,10 @@
+<%= form_for @clazz do |f| %>
+  <div><%= f.error_messages %></div>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

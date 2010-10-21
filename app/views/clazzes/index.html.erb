@@ -1,0 +1,15 @@
+<div>
+  <h3>Classes</h3>
+  <div>
+    <% @clazzes.each do |clazz| %>
+      <div>
+      <span><%= clazz.name %></span>
+      <span><%= link_to 'Show', clazz_path(clazz) %></span>
+      <span><%= link_to 'Edit', edit_clazz_path(clazz) %></span>
+      <span><%= link_to 'Delete', clazz_path(clazz), :method => :delete %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
+<hr/>
+<%= link_to 'New', new_clazz_path %>

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101021192801) do
+ActiveRecord::Schema.define(:version => 20101021193814) do
+
+  create_table "attendances", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "clazz_id"
+    t.date     "date"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clazz_infos", :force => true do |t|
     t.string "section"

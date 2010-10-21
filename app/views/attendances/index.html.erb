@@ -1,0 +1,13 @@
+<div>
+  <h3> Attendances for Class <%= @clazz.name %> Year <%= @clazz.year %>
+  <% @attendances.each do |attendance| %>
+    <div>
+      <span><%= attendance.student.name %></span>
+      <span><%= attendance.date %></span>
+      <span><%= attendance.status %></span>
+    </div>
+  <% end %>
+</div>
+<hr/>
+<%= link_to 'New Attendance', new_clazz_attendance_path(@clazz) %> | 
+<%= link_to 'Back', clazz_path(@clazz) %>

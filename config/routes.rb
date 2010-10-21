@@ -1,3 +1,6 @@
 School::Application.routes.draw do
-  resources :clazzes, :students, :teachers
+  resources :clazzes, :shallow => true do
+    resources :attendances
+  end
+  resources :students, :teachers
 end

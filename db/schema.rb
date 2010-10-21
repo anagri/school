@@ -12,20 +12,20 @@
 
 ActiveRecord::Schema.define(:version => 20101021150628) do
 
-  create_table "clazz", :force => true do |t|
+  create_table "clazzes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "clazzes_students", :force => true do |t|
+  create_table "clazzes_students", :id => false, :force => true do |t|
     t.integer  "clazz_id"
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "clazzes_teachers", :force => true do |t|
+  create_table "clazzes_teachers", :id => false, :force => true do |t|
     t.integer  "clazz_id"
     t.integer  "teacher_id"
     t.datetime "created_at"

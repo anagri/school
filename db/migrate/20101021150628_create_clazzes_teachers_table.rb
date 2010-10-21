@@ -1,6 +1,6 @@
 class CreateClazzesTeachersTable < ActiveRecord::Migration
   def self.up
-    create_table :clazzes_teachers do |t|
+    create_table :clazzes_teachers, :id => false do |t|
       t.references :clazz
       t.references :teacher
       t.timestamps

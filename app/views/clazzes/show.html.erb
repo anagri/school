@@ -5,6 +5,14 @@
     <span><%= @clazz.name %></span>
   </div>
   <div>
+    <span>Year</span>
+    <span><%= @clazz.year %></span>
+  </div>
+  <div>
+    <span>Section</span>
+    <span><%= @clazz.clazz_info.section %></span>
+  </div>
+  <div>
     <span>Teachers</span>
     <span><%= @clazz.teachers.map(&:name).join(', ') %></span>
   </div>

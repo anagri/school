@@ -5,6 +5,14 @@
     <%= f.text_field :name %>
   </div>
   <div>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+  <div>
+    <%= f.label :clazz_info_id, 'Class # :' %>
+    <%= f.collection_select :clazz_info_id, ClazzInfo.all, :id, :section %>
+  </div>
+  <div>
     <%= f.submit %>
   </div>
 <% end %>

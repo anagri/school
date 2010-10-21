@@ -10,12 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101021150628) do
+ActiveRecord::Schema.define(:version => 20101021191947) do
+
+  create_table "clazz_infos", :force => true do |t|
+    t.string "section"
+  end
 
   create_table "clazzes", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "year"
   end
 
   create_table "clazzes_students", :id => false, :force => true do |t|
